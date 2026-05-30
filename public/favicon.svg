@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Brand Dark Navy/Blue Background Circle -->
+  <circle cx="64" cy="64" r="60" fill="#1a0fa8" />
+  
+  <!-- Accent Orange Accent Stripe -->
+  <path d="M20 90 L108 38 L100 30 L12 82 Z" fill="#d4521a" opacity="0.85" />
+  
+  <!-- Supporting Cream Stripe -->
+  <path d="M12 92 L100 40 L96 34 L8 86 Z" fill="#f5ddb8" opacity="0.9" />
+
+  <!-- Bold White Serif R -->
+  <text x="64" y="82" font-family="'Playfair Display', 'Georgia', serif" font-weight="900" font-size="64" fill="#ffffff" text-anchor="middle">R</text>
+</svg>

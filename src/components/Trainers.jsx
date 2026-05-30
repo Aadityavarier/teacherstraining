@@ -1,0 +1,79 @@
+import { motion } from 'framer-motion';
+import { FaLinkedin } from 'react-icons/fa';
+
+const trainers = [
+  {
+    name: 'Revathi Varier',
+    initials: 'RV',
+    role: 'Trainer, Rapid TTI',
+    bio: 'Experienced educator with a passion for child development and innovative teaching methodologies.',
+  },
+  {
+    name: 'Rita Som',
+    initials: 'RS',
+    role: 'Director & Lead Mentor, Rapid TTI',
+    bio: 'Visionary leader with decades of experience in teacher training and educational administration.',
+  },
+  {
+    name: 'Rumjhum Sengupta',
+    initials: 'RS',
+    role: 'Trainer, Rapid TTI',
+    bio: 'Dedicated mentor specializing in early childhood curriculum design and classroom management.',
+  },
+];
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: 'easeOut' },
+  },
+};
+
+const Trainers = () => {
+  return (
+    <section id="trainers" className="bg-soft-cream py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="font-playfair text-3xl md:text-4xl font-bold text-primary text-center">
+          Learn from Experienced Educators
+        </h2>
+
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 max-w-5xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {trainers.map((trainer, index) => (
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              className="bg-white rounded-2xl shadow-md p-8 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group border-t-4 border-transparent hover:border-accent"
+            >
+              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-dark-navy mx-auto flex items-center justify-center text-white text-2xl font-bold">
+                {trainer.initials}
+              </div>
+              <h3 className="mt-6 text-xl font-bold text-text-primary">{trainer.name}</h3>
+              <p className="text-accent font-medium mt-1">{trainer.role}</p>
+              <p className="text-text-primary/60 mt-3 text-sm">{trainer.bio}</p>
+              <FaLinkedin className="text-primary/40 mt-4 text-xl mx-auto" />
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Trainers;
