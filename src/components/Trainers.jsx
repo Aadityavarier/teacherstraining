@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
-
-const ritaPhoto = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop";
-const revathiPhoto = "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop";
-const rumjhumPhoto = "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=600&auto=format&fit=crop";
+import ritaPhoto from '../assets/trainer-rita.png';
+import revathiPhoto from '../assets/trainer-revathi.png';
+import rumjhumPhoto from '../assets/trainer-rumjhum.png';
 
 const trainers = [
   {

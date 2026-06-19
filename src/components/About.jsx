@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaSchool } from 'react-icons/fa';
-
-const aboutImage = "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop";
+import aboutImage from '../assets/about-photo.jpg';
 
 
 const slideFromLeft = {
@@ -58,7 +57,7 @@ export default function About() {
             whileInView="visible"
             viewport={{ once: true, margin: '-80px' }}
           >
-            <div className="aspect-video rounded-2xl bg-gradient-to-br from-primary/10 to-cream/40 shadow-xl overflow-hidden flex items-center justify-center relative">
+            <div className="aspect-[4/3] lg:scale-105 rounded-2xl bg-gradient-to-br from-primary/10 to-cream/40 shadow-xl overflow-hidden flex items-center justify-center relative">
               <img 
                 src={aboutImage} 
                 alt="Rapid Institute Classroom" 

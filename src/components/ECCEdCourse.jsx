@@ -108,12 +108,7 @@ export default function ECCEdCourse() {
           >
             Enquire About the Course
           </button>
-          <button
-            disabled
-            className="border-2 border-white/50 text-white/50 rounded-full px-8 py-3 cursor-not-allowed"
-          >
-            Download Brochure
-          </button>
+
         </div>
       </div>
     </section>
