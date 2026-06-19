@@ -12,21 +12,49 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    email: '',
     location: '',
     message: '',
   });
-  const [showToast, setShowToast] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    if (errors[e.target.name]) {
+      setErrors({ ...errors, [e.target.name]: '' });
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setShowToast(true);
-    setFormData({ name: '', phone: '', email: '', location: '', message: '' });
-    setTimeout(() => setShowToast(false), 4000);
+    
+    // Validation
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = "Full Name is required";
+    if (!formData.phone.trim()) newErrors.phone = "Phone Number is required";
+    if (!formData.location) newErrors.location = "Preferred Location is required";
+    
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    const phoneNumber = "919022582988"; // primary number
+    const message = `Hi, I would like to enquire about the ECCEd Teacher Training program.
+
+*Name:* ${formData.name}
+*Phone:* ${formData.phone}
+*Preferred Location:* ${formData.location}
+*Message:* ${formData.message || "No additional message"}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappURL, "_blank");
+
+    setShowConfirmation(true);
+    setFormData({ name: '', phone: '', location: '', message: '' });
+    setTimeout(() => setShowConfirmation(false), 6000);
   };
 
   return (
@@ -67,9 +95,12 @@ const Contact = () => {
                 <FaPhone className="text-accent" />
                 <span>9820712536</span>
               </a>
-              <div className="flex items-center gap-3">
-                <FaMapMarkerAlt className="text-accent flex-shrink-0" />
-                <span>302, Om Dubey Dham, above Shobha Hospital, Ambernath-East</span>
+              <div className="flex items-start gap-3">
+                <FaMapMarkerAlt className="text-accent flex-shrink-0 mt-1" />
+                <div className="flex flex-col gap-2">
+                  <span><strong className="text-white/90">Ambernath:</strong> 302, Om Dubey Dham, above Shobha Hospital, Ambernath-East</span>
+                  <span><strong className="text-white/90">Palava:</strong> 1702, Serenity C Wing, Lakeshore Greens, Lodha Palava Phase 2, Dombivali East, 421204</span>
+                </div>
               </div>
             </div>
 
@@ -85,7 +116,9 @@ const Contact = () => {
 
             <div className="mt-6">
               <a
-                href="#"
+                href="https://www.facebook.com/people/Rapid-Teacher-Training-Institute/61578641480359"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white/60 text-2xl hover:text-accent transition"
                 aria-label="Facebook"
               >
@@ -99,58 +132,49 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="text-sm font-medium text-text-primary/80 mb-1 block">
-                  Full Name
+                  Full Name <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
                   name="name"
-                  required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full p-3 rounded-lg border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition text-text-primary"
+                  className={`w-full p-3 rounded-lg border ${errors.name ? 'border-red-500' : 'border-gray-200'} focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition text-text-primary`}
                 />
+                {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
               </div>
 
               <div>
                 <label className="text-sm font-medium text-text-primary/80 mb-1 block">
-                  Phone Number
+                  Phone Number <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="tel"
                   name="phone"
-                  required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full p-3 rounded-lg border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition text-text-primary"
+                  className={`w-full p-3 rounded-lg border ${errors.phone ? 'border-red-500' : 'border-gray-200'} focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition text-text-primary`}
                 />
+                {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
               </div>
+
+
 
               <div>
                 <label className="text-sm font-medium text-text-primary/80 mb-1 block">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full p-3 rounded-lg border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition text-text-primary"
-                />
-              </div>
-
-              <div>
-                <label className="text-sm font-medium text-text-primary/80 mb-1 block">
-                  Preferred Location
+                  Preferred Location <span className="text-red-500">*</span>
                 </label>
                 <select
                   name="location"
                   value={formData.location}
                   onChange={handleChange}
-                  className="w-full p-3 rounded-lg border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition text-text-primary"
+                  className={`w-full p-3 rounded-lg border ${errors.location ? 'border-red-500' : 'border-gray-200'} focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition text-text-primary`}
                 >
                   <option value="">Choose Location</option>
-                  <option value="Ambernath-East">Ambernath-East</option>
+                  <option value="Ambernath">Ambernath</option>
+                  <option value="Palava">Palava, Dombivali</option>
                 </select>
+                {errors.location && <p className="text-red-500 text-xs mt-1">{errors.location}</p>}
               </div>
 
               <div>
@@ -168,22 +192,23 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="bg-accent text-white w-full py-3 rounded-full font-semibold text-lg hover:bg-accent/90 hover:shadow-lg transition mt-2"
+                className="bg-accent text-white w-full py-3 rounded-full font-semibold text-lg hover:bg-accent/90 hover:shadow-lg transition mt-2 flex items-center justify-center gap-2"
               >
-                Send Enquiry
+                <FaWhatsapp className="text-xl" />
+                Send via WhatsApp
               </button>
             </form>
+
+            {/* Inline Confirmation */}
+            {showConfirmation && (
+              <div className="mt-4 p-4 bg-green-50 text-green-700 rounded-lg flex items-center gap-2 border border-green-200">
+                <FaCheckCircle className="text-green-500 flex-shrink-0" />
+                <p className="text-sm">You're being redirected to WhatsApp — just hit send to complete your enquiry!</p>
+              </div>
+            )}
           </div>
         </div>
       </motion.div>
-
-      {/* Toast Notification */}
-      {showToast && (
-        <div className="toast-enter fixed bottom-4 right-4 z-50 bg-green-500 text-white px-6 py-3 rounded-xl shadow-xl flex items-center gap-2">
-          <FaCheckCircle />
-          Thank you! We'll get back to you shortly.
-        </div>
-      )}
     </section>
   );
 };

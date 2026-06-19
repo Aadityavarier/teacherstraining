@@ -2,6 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
 
+// TODO: Replace with client content
+import heroPhoto from '../assets/hero-photo.jpg';
+
+
 const containerVariants = {
   hidden: {},
   visible: {
@@ -51,11 +55,15 @@ const Hero = () => {
             initial="hidden"
             animate="visible"
           >
+            <motion.div variants={childVariants} className="mb-4 inline-block bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-1.5 rounded-full">
+              <span className="font-sans text-cream text-sm font-semibold tracking-wider uppercase">Established 2007</span>
+            </motion.div>
+            
             <motion.h1
               variants={childVariants}
-              className="font-playfair text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
+              className="font-playfair text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
             >
-              Shaping Passionate Educators for a Better Tomorrow
+              Shaping Passionate Educators for a Better Tomorrow Since 2007
             </motion.h1>
 
             <motion.p
@@ -91,7 +99,7 @@ const Hero = () => {
               variants={childVariants}
               className="mt-6 font-sans text-cream/90 text-sm md:text-base tracking-wide"
             >
-              ⭐ ITES Certified · Ambernath, East Mumbai · 2000+ Trained
+              ⭐ ITES Certified · Ambernath & Palava, Dombivali · 2000+ Trained
             </motion.p>
           </motion.div>
 
@@ -103,34 +111,12 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
           >
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              {/* Gradient Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-dark-navy via-primary to-accent/30" />
-
-              {/* Soft Blue Glow */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(26,15,168,0.4)_0%,transparent_70%)]" />
-
-              {/* Decorative Elements */}
-              <div className="absolute top-4 left-4 w-16 h-16 border-2 border-white/20 rounded-lg" />
-              <div className="absolute bottom-4 right-4 w-12 h-12 border-2 border-accent/30 rounded-full" />
-              <div className="absolute top-1/4 right-6 w-2 h-2 bg-accent/60 rounded-full" />
-              <div className="absolute bottom-1/3 left-8 w-3 h-3 bg-cream/20 rounded-full" />
-
-              {/* Logo Badge in the Center of the Glow Card */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                <div className="bg-white p-6 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300">
-                  <img
-                    src="/RAPID.png"
-                    alt="Rapid Teacher Training Institute"
-                    className="max-h-24 w-auto object-contain"
-                  />
-                </div>
-                <p className="font-sans text-white/90 text-sm md:text-base font-semibold mt-5 tracking-wide">
-                  Rapid Teacher Training Institute
-                </p>
-                <p className="font-sans text-cream/70 text-xs md:text-sm mt-1">
-                  Ambernath-East, Mumbai
-                </p>
-              </div>
+              {/* Client Photo */}
+              <img 
+                src={heroPhoto} 
+                alt="Rapid Institute Classroom" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
 
               {/* Border glow ring */}
               <div className="absolute inset-0 rounded-2xl ring-1 ring-white/10" />

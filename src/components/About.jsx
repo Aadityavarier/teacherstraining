@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion';
 import { FaSchool } from 'react-icons/fa';
 
+// TODO: Replace with client content
+import aboutImage from '../assets/about-photo.jpg';
+
+
 const slideFromLeft = {
   hidden: { opacity: 0, x: -60 },
   visible: {
@@ -43,7 +47,7 @@ export default function About() {
               positively shape the minds of children aged 2–6 years. Our
               programs combine practical learning, professional guidance, and
               career support to ensure every student is classroom-ready from day
-              one. Based in Ambernath-East, Mumbai — we
+              one. Present in Ambernath & Palava, Dombivali — we
               are a trusted name in ECCEd teacher training across the region.
             </p>
           </motion.div>
@@ -55,13 +59,12 @@ export default function About() {
             whileInView="visible"
             viewport={{ once: true, margin: '-80px' }}
           >
-            <div className="aspect-video rounded-2xl bg-gradient-to-br from-primary/10 to-cream/40 shadow-xl flex items-center justify-center">
-              <div className="text-center">
-                <FaSchool className="text-primary/40 text-6xl mx-auto mb-3" />
-                <span className="text-primary/40 text-lg font-medium">
-                  Institute Photo
-                </span>
-              </div>
+            <div className="aspect-video rounded-2xl bg-gradient-to-br from-primary/10 to-cream/40 shadow-xl overflow-hidden flex items-center justify-center relative">
+              <img 
+                src={aboutImage} 
+                alt="Rapid Institute Classroom" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
           </motion.div>
         </div>

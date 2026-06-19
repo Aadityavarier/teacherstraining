@@ -59,7 +59,10 @@ const Footer = () => {
               <p className="text-white/50">90225 82988</p>
               <p className="text-white/50">9820712536</p>
               <p className="text-white/50">
-                302, Om Dubey Dham, above Shobha Hospital, Ambernath-East
+                <strong>Ambernath:</strong> 302, Om Dubey Dham, above Shobha Hospital, Ambernath-East
+              </p>
+              <p className="text-white/50">
+                <strong>Palava:</strong> 1702, Serenity C Wing, Lakeshore Greens, Lodha Palava Phase 2, Dombivali East, 421204
               </p>
               <a
                 href="https://wa.me/919022582988?text=Hi%2C%20I%20want%20to%20know%20more%20about%20your%20ECCEd%20Teacher%20Training%20program"
@@ -78,6 +81,19 @@ const Footer = () => {
           <p className="text-white/40 text-sm">
             © 2025 Rapid Teacher Training Institute. All rights reserved.
           </p>
+          <div className="border-t border-white/10 mt-4 pt-4 text-center">
+            <p className="text-xs text-white/50">
+              Designed & Built by{" "}
+              <a
+                href="https://aadityavarier.github.io/Portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 font-medium hover:text-[#d4521a] hover:underline transition-colors"
+              >
+                Aaditya Varier
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

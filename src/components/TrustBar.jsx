@@ -31,7 +31,7 @@ function useCountUp(target, duration = 2000, inView) {
 
 const stats = [
   { value: 2000, suffix: '+', label: 'Teachers Trained', isNumeric: true },
-  { value: 'Ambernath', suffix: '', label: 'East Mumbai', isNumeric: false },
+  { value: '2 Branches', suffix: '', label: 'Ambernath & Palava', isNumeric: false },
   { value: 'ITES', suffix: '', label: 'Certified', isNumeric: false },
   { value: 100, suffix: '%', label: 'Career Support', isNumeric: true },
 ];

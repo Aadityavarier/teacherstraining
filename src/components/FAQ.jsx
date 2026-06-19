@@ -29,9 +29,9 @@ const faqs = [
       'No prior experience is required. Our program is designed to take you from beginner to classroom-ready.',
   },
   {
-    question: 'Which location do you operate from?',
+    question: 'Which locations do you operate from?',
     answer:
-      'We are currently operating from our centre in Ambernath-East, Mumbai. Our address is 302, Om Dubey Dham, above Shobha Hospital, Ambernath-East.',
+      'We operate from two branches — Ambernath-East and Palava, Dombivali. Visit us at either location for enquiries and admissions.',
   },
 ];
 

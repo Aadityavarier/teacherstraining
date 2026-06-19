@@ -1,22 +1,26 @@
 import { motion } from 'framer-motion';
-import { FaLinkedin } from 'react-icons/fa';
+
+// TODO: Replace with client content
+import ritaPhoto from '../assets/trainer-rita.jpg';
+import revathiPhoto from '../assets/trainer-revathi.jpg';
+import rumjhumPhoto from '../assets/trainer-rumjhum.jpg';
 
 const trainers = [
   {
-    name: 'Revathi Varier',
-    initials: 'RV',
-    role: 'Trainer, Rapid TTI',
-    bio: 'Experienced educator with a passion for child development and innovative teaching methodologies.',
-  },
-  {
     name: 'Rita Som',
-    initials: 'RS',
+    image: ritaPhoto,
     role: 'Director & Lead Mentor, Rapid TTI',
     bio: 'Visionary leader with decades of experience in teacher training and educational administration.',
   },
   {
+    name: 'Revathi Varier',
+    image: revathiPhoto,
+    role: 'Certified Jolly Phonics Trainer, Rapid TTI',
+    bio: 'Experienced educator with a passion for child development and innovative teaching methodologies.',
+  },
+  {
     name: 'Rumjhum Sengupta',
-    initials: 'RS',
+    image: rumjhumPhoto,
     role: 'Trainer, Rapid TTI',
     bio: 'Dedicated mentor specializing in early childhood curriculum design and classroom management.',
   },
@@ -61,13 +65,16 @@ const Trainers = () => {
               variants={cardVariants}
               className="bg-white rounded-2xl shadow-md p-8 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group border-t-4 border-transparent hover:border-accent"
             >
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-dark-navy mx-auto flex items-center justify-center text-white text-2xl font-bold">
-                {trainer.initials}
+              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-dark-navy mx-auto flex items-center justify-center text-white text-2xl font-bold overflow-hidden border-4 border-white shadow-lg">
+                <img 
+                  src={trainer.image} 
+                  alt={trainer.name} 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="mt-6 text-xl font-bold text-text-primary">{trainer.name}</h3>
               <p className="text-accent font-medium mt-1">{trainer.role}</p>
               <p className="text-text-primary/60 mt-3 text-sm">{trainer.bio}</p>
-              <FaLinkedin className="text-primary/40 mt-4 text-xl mx-auto" />
             </motion.div>
           ))}
         </motion.div>
