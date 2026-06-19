@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaSchool } from 'react-icons/fa';
 
-// TODO: Replace with client content
-import aboutImage from '../assets/about-photo.jpg';
+const aboutImage = "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop";
 
 
 const slideFromLeft = {
@@ -27,7 +26,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-20 bg-gradient-to-b from-white to-soft-cream/30"
+      className="py-20 bg-gradient-to-b from-white to-soft-cream/30 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

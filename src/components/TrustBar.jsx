@@ -79,7 +79,7 @@ export default function TrustBar() {
   const inView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <section className="bg-cream py-6">
+    <section className="bg-cream py-6 pb-24 md:pb-6 relative z-10">
       <div
         ref={ref}
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"

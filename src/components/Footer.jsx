@@ -15,11 +15,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <div className="bg-white/5 border border-white/10 rounded-2xl p-5 inline-block shadow-lg max-w-xs">
-              <div className="bg-white rounded-xl p-2.5 inline-block shadow-inner hover:scale-105 transition-transform duration-200">
+              <div className="bg-white rounded-2xl p-4 inline-flex items-center justify-center shadow-inner hover:scale-105 transition-transform duration-200">
                 <img
                   src="/RAPID.png"
                   alt="Rapid Teacher Training Institute"
-                  className="h-10 w-auto object-contain"
+                  className="h-12 w-auto object-contain"
                 />
               </div>
               <p className="text-white/70 mt-4 text-xs font-bold tracking-wider font-sans">

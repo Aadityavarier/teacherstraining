@@ -2,8 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
 
-// TODO: Replace with client content
-import heroPhoto from '../assets/hero-photo.jpg';
+const heroPhoto = "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop";
 
 
 const containerVariants = {
