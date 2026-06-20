@@ -7,6 +7,7 @@ const navLinks = [
   { label: 'Course', id: 'course' },
   { label: 'Trainers', id: 'trainers' },
   { label: 'Success Stories', id: 'stories' },
+  { label: 'Gallery', id: 'gallery' },
   { label: 'Location', id: 'branches' },
   { label: 'Contact', id: 'contact' },
 ];

@@ -108,12 +108,12 @@ const Hero = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
           >
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               {/* Client Photo */}
               <img 
                 src={heroPhoto} 
                 alt="Rapid Institute Classroom" 
-                className="absolute inset-0 w-full h-full object-cover"
+                className="w-full h-auto object-cover"
               />
 
               {/* Border glow ring */}

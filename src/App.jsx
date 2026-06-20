@@ -7,6 +7,7 @@ import ECCEdCourse from './components/ECCEdCourse'
 import WhyChoose from './components/WhyChoose'
 import Trainers from './components/Trainers'
 import SuccessStories from './components/SuccessStories'
+import Gallery from './components/Gallery'
 import ChangeMaker from './components/ChangeMaker'
 import Branches from './components/Branches'
 import FAQ from './components/FAQ'
@@ -27,6 +28,7 @@ function App() {
         <WhyChoose />
         <Trainers />
         <SuccessStories />
+        <Gallery />
         <ChangeMaker />
         <Branches />
         <FAQ />
