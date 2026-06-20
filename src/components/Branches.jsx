@@ -53,7 +53,7 @@ export default function Branches() {
               Lodha Palava Phase 2, Dombivali East, 421204
             </p>
             <a
-              href="https://share.google/1gl1Q24HDxi4Qmgtk"
+              href="https://www.google.com/maps/place/Lodha+Serenity/@19.1652826,73.1119538,17z/data=!4m6!3m5!1s0x3be79581b9e610dd:0x30b0916c0a648209!8m2!3d19.1652776!4d73.1145287!16s%2Fg%2F11fnx8fcnz?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block mt-6 border-2 border-accent text-accent rounded-full px-8 py-3 font-medium hover:bg-accent hover:text-white transition-all duration-300"
