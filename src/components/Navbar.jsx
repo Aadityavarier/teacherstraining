@@ -24,17 +24,21 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (id) => {
-    setMobileOpen(false);
+    // Start scrolling immediately
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const offset = 80; // height of navbar
+      const y = el.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
+    // Close mobile menu
+    setMobileOpen(false);
   };
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${
+        scrolled || mobileOpen
           ? 'bg-white/95 backdrop-blur-md shadow-lg'
           : 'bg-transparent'
       }`}
@@ -43,7 +47,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <div 
             className="flex items-center gap-3 cursor-pointer group" 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setMobileOpen(false); }}
           >
             {/* Circular Brand Mark Icon */}
             <img
@@ -54,12 +58,12 @@ const Navbar = () => {
             {/* Dynamic Typography Branding */}
             <div className="flex flex-col">
               <span className={`font-playfair text-2xl font-black tracking-wider transition-colors duration-300 ${
-                scrolled ? 'text-primary' : 'text-white'
+                scrolled || mobileOpen ? 'text-primary' : 'text-white'
               }`}>
                 RAPID
               </span>
               <span className={`font-sans text-[9px] font-bold uppercase tracking-[0.2em] -mt-1 transition-colors duration-300 ${
-                scrolled ? 'text-accent' : 'text-cream'
+                scrolled || mobileOpen ? 'text-accent' : 'text-cream'
               }`}>
                 Teacher Training
               </span>
@@ -94,9 +98,9 @@ const Navbar = () => {
             aria-label="Toggle menu"
           >
             {mobileOpen ? (
-              <HiX className={`w-7 h-7 ${scrolled ? 'text-text-primary' : 'text-white'}`} />
+              <HiX className={`w-7 h-7 ${scrolled || mobileOpen ? 'text-text-primary' : 'text-white'}`} />
             ) : (
-              <HiMenu className={`w-7 h-7 ${scrolled ? 'text-text-primary' : 'text-white'}`} />
+              <HiMenu className={`w-7 h-7 ${scrolled || mobileOpen ? 'text-text-primary' : 'text-white'}`} />
             )}
           </button>
         </div>
