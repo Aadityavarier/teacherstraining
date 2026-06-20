@@ -15,6 +15,7 @@ const trainers = [
     image: revathiPhoto,
     role: 'Certified Jolly Phonics Trainer, Rapid TTI',
     bio: 'Experienced educator with a passion for child development and innovative teaching methodologies.',
+    link: 'https://www.facebook.com/profile.php?id=100089942012275',
   },
   {
     name: 'Rumjhum Sengupta',
@@ -71,7 +72,11 @@ const Trainers = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="mt-6 text-xl font-bold text-text-primary">{trainer.name}</h3>
+              {trainer.link ? (
+                <a href={trainer.link} target="_blank" rel="noopener noreferrer" className="mt-6 text-xl font-bold text-text-primary hover:text-accent transition-colors duration-300 inline-block">{trainer.name}</a>
+              ) : (
+                <h3 className="mt-6 text-xl font-bold text-text-primary">{trainer.name}</h3>
+              )}
               <p className="text-accent font-medium mt-1">{trainer.role}</p>
               <p className="text-text-primary/60 mt-3 text-sm">{trainer.bio}</p>
             </motion.div>
