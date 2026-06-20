@@ -9,7 +9,6 @@ const navLinks = [
   { label: 'Success Stories', id: 'stories' },
   { label: 'Gallery', id: 'gallery' },
   { label: 'Location', id: 'branches' },
-  { label: 'Contact', id: 'contact' },
 ];
 
 const Navbar = () => {
@@ -110,7 +109,7 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            transition={{ duration: 0.35, ease: [0.25, 0.4, 0.25, 1] }}
             className="lg:hidden overflow-hidden bg-white shadow-xl"
           >
             <div className="px-6 py-6 flex flex-col gap-4">

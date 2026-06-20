@@ -17,11 +17,11 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: 'easeOut' },
+    transition: { duration: 0.7, ease: [0.25, 0.4, 0.25, 1] },
   },
 };
 
@@ -85,7 +85,7 @@ export default function ChangeMaker() {
         <motion.div variants={itemVariants} className="mt-12">
           <button
             onClick={scrollToContact}
-            className="bg-accent text-white rounded-full px-10 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            className="bg-accent text-white rounded-full px-10 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl hover:scale-[1.03] transition-all duration-500 ease-out"
           >
             Start Your Journey Today
           </button>

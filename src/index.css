@@ -15,11 +15,18 @@ html, body, #root {
 
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   font-family: 'DM Sans', sans-serif;
   color: #1a1a2e;
+}
+
+/* GPU-accelerated transitions for interactive elements */
+a, button {
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Custom scrollbar */

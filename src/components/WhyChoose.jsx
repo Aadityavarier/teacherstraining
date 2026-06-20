@@ -40,10 +40,10 @@ const WhyChoose = () => {
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: isOdd ? -50 : 50 }}
+                initial={{ opacity: 0, x: isOdd ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.7, delay: index * 0.08, ease: [0.25, 0.4, 0.25, 1] }}
                 className="p-8 rounded-xl bg-white shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-primary/30 hover:border-accent"
               >
                 <Icon className="text-4xl text-primary" />

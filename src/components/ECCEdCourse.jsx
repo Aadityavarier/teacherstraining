@@ -45,17 +45,18 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.12,
+      staggerChildren: 0.08,
+      delayChildren: 0.1,
     },
   },
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: 'easeOut' },
+    transition: { duration: 0.6, ease: [0.25, 0.4, 0.25, 1] },
   },
 };
 
@@ -91,7 +92,7 @@ export default function ECCEdCourse() {
               <motion.div
                 key={index}
                 variants={cardVariants}
-                className="glass-card p-6 hover:bg-white/15 transition-all duration-300"
+                className="glass-card p-6 hover:bg-white/15 hover:-translate-y-1 transition-all duration-500 ease-out"
               >
                 <Icon className="text-accent text-3xl mb-4" />
                 <h3 className="text-white font-semibold text-lg">{card.title}</h3>

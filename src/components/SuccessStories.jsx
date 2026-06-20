@@ -27,17 +27,18 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.12,
+      delayChildren: 0.1,
     },
   },
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: 'easeOut' },
+    transition: { duration: 0.7, ease: [0.25, 0.4, 0.25, 1] },
   },
 };
 
@@ -104,21 +105,7 @@ export default function SuccessStories() {
           ))}
         </motion.div>
 
-        {/* Read More Link */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-12 text-center"
-        >
-          <a
-            href="#"
-            className="text-cream hover:text-accent transition underline underline-offset-4"
-          >
-            Read More Stories →
-          </a>
-        </motion.div>
+
       </div>
     </section>
   );

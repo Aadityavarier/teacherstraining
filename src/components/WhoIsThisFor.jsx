@@ -33,17 +33,18 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.1,
+      delayChildren: 0.1,
     },
   },
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: 'easeOut' },
+    transition: { duration: 0.6, ease: [0.25, 0.4, 0.25, 1] },
   },
 };
 
@@ -77,7 +78,7 @@ export default function WhoIsThisFor() {
                 <motion.div
                   key={index}
                   variants={cardVariants}
-                  className="p-6 bg-soft-cream rounded-xl border-l-4 border-primary hover:border-accent hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                  className="p-6 bg-soft-cream rounded-xl border-l-4 border-primary hover:border-accent hover:shadow-lg hover:-translate-y-1 transition-all duration-500 ease-out"
                 >
                   <Icon className="text-3xl text-primary mb-4" />
                   <h3 className="font-semibold text-lg text-text-primary">{card.title}</h3>
@@ -95,7 +96,7 @@ export default function WhoIsThisFor() {
                 <motion.div
                   key={index + 3}
                   variants={cardVariants}
-                  className="p-6 bg-soft-cream rounded-xl border-l-4 border-primary hover:border-accent hover:shadow-lg hover:-translate-y-1 transition-all duration-300 w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
+                  className="p-6 bg-soft-cream rounded-xl border-l-4 border-primary hover:border-accent hover:shadow-lg hover:-translate-y-1 transition-all duration-500 ease-out w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
                 >
                   <Icon className="text-3xl text-primary mb-4" />
                   <h3 className="font-semibold text-lg text-text-primary">{card.title}</h3>

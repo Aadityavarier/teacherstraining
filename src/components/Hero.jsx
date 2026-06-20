@@ -8,17 +8,18 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.15,
+      delayChildren: 0.1,
     },
   },
 };
 
 const childVariants = {
-  hidden: { y: 30, opacity: 0 },
+  hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
-    transition: { duration: 0.6, ease: 'easeOut' },
+    transition: { duration: 0.7, ease: [0.25, 0.4, 0.25, 1] },
   },
 };
 
@@ -78,7 +79,7 @@ const Hero = () => {
             >
               <button
                 onClick={scrollToContact}
-                className="bg-accent text-white font-sans font-semibold rounded-full px-8 py-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
+                className="bg-accent text-white font-sans font-semibold rounded-full px-8 py-3 shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all duration-300 ease-out"
               >
                 Enquire Now
               </button>
@@ -104,9 +105,9 @@ const Hero = () => {
           {/* Image Placeholder Column — 40% (2 of 5 cols) */}
           <motion.div
             className="lg:col-span-2"
-            initial={{ y: 40, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
+            initial={{ y: 24, opacity: 0, scale: 0.97 }}
+            animate={{ y: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.5, ease: [0.25, 0.4, 0.25, 1] }}
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               {/* Client Photo */}

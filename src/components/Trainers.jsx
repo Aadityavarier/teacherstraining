@@ -28,17 +28,18 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.12,
+      delayChildren: 0.1,
     },
   },
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: 'easeOut' },
+    transition: { duration: 0.7, ease: [0.25, 0.4, 0.25, 1] },
   },
 };
 
@@ -61,7 +62,7 @@ const Trainers = () => {
             <motion.div
               key={index}
               variants={cardVariants}
-              className="bg-white rounded-2xl shadow-md p-8 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group border-t-4 border-transparent hover:border-accent"
+              className="bg-white rounded-2xl shadow-md p-8 text-center hover:-translate-y-1.5 hover:shadow-xl transition-all duration-500 ease-out group border-t-4 border-transparent hover:border-accent"
             >
               <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-dark-navy mx-auto flex items-center justify-center text-white text-2xl font-bold overflow-hidden border-4 border-white shadow-lg">
                 <img 

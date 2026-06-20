@@ -126,7 +126,7 @@ export default function Gallery() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "50px" }}
-              transition={{ duration: 0.5, delay: (index % 10) * 0.05 }}
+              transition={{ duration: 0.5, delay: (index % 8) * 0.04, ease: [0.25, 0.4, 0.25, 1] }}
               className="break-inside-avoid inline-block w-full mb-3 md:mb-4 relative group cursor-pointer overflow-hidden rounded-lg bg-gray-100"
               onClick={() => openLightbox(index)}
             >
@@ -134,7 +134,7 @@ export default function Gallery() {
                 src={img.src}
                 alt={img.alt}
                 loading="lazy"
-                className="w-full h-auto object-cover rounded-lg group-hover:scale-105 transition-transform duration-500 ease-out"
+                className="w-full h-auto object-cover rounded-lg group-hover:scale-[1.03] transition-transform duration-700 ease-out"
               />
               {/* Subtle overlay on hover */}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded-lg pointer-events-none" />
@@ -150,8 +150,8 @@ export default function Gallery() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 sm:p-8"
+            transition={{ duration: 0.25, ease: [0.25, 0.4, 0.25, 1] }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 sm:p-8"
             onClick={closeLightbox}
           >
             {/* Close Button */}

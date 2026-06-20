@@ -4,20 +4,20 @@ import aboutImage from '../assets/about-photo.jpg';
 
 
 const slideFromLeft = {
-  hidden: { opacity: 0, x: -60 },
+  hidden: { opacity: 0, x: -40 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.8, ease: 'easeOut' },
+    transition: { duration: 0.9, ease: [0.25, 0.4, 0.25, 1] },
   },
 };
 
 const slideFromRight = {
-  hidden: { opacity: 0, x: 60 },
+  hidden: { opacity: 0, x: 40 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.8, ease: 'easeOut', delay: 0.2 },
+    transition: { duration: 0.9, ease: [0.25, 0.4, 0.25, 1], delay: 0.15 },
   },
 };
 
