@@ -24,15 +24,20 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (id) => {
-    // Start scrolling immediately
-    const el = document.getElementById(id);
-    if (el) {
-      const offset = 80; // height of navbar
-      const y = el.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-    // Close mobile menu
+    // Close mobile menu first
     setMobileOpen(false);
+
+    // Wait for the menu's exit animation to complete (or nearly complete) 
+    // before triggering the scroll. Mobile browsers often cancel scrolls 
+    // if a large DOM element is animating out or unmounting at the exact same time.
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) {
+        const offset = 80; // height of navbar
+        const y = el.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }, 300);
   };
 
   return (
