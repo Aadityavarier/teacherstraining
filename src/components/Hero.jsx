@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
-import heroPhoto from '../assets/hero-photo.jpg';
+import heroPhoto from '../assets/hero-photo.webp';
 
 
 const containerVariants = {

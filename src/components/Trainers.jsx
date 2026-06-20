@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import ritaPhoto from '../assets/trainer-rita.png';
-import revathiPhoto from '../assets/trainer-revathi.png';
-import rumjhumPhoto from '../assets/trainer-rumjhum.png';
+import ritaPhoto from '../assets/trainer-rita.webp';
+import revathiPhoto from '../assets/trainer-revathi.webp';
+import rumjhumPhoto from '../assets/trainer-rumjhum.webp';
 
 const trainers = [
   {

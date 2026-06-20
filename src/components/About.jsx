@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaSchool } from 'react-icons/fa';
-import aboutImage from '../assets/about-photo.jpg';
+import aboutImage from '../assets/about-photo.webp';
 
 
 const slideFromLeft = {

@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react';
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import TrustBar from './components/TrustBar'
@@ -7,13 +8,15 @@ import ECCEdCourse from './components/ECCEdCourse'
 import WhyChoose from './components/WhyChoose'
 import Trainers from './components/Trainers'
 import SuccessStories from './components/SuccessStories'
-import Gallery from './components/Gallery'
-import ChangeMaker from './components/ChangeMaker'
-import Branches from './components/Branches'
-import FAQ from './components/FAQ'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
+
+// Lazy-load below-fold heavy components to speed up initial page load
+const Gallery = lazy(() => import('./components/Gallery'))
+const ChangeMaker = lazy(() => import('./components/ChangeMaker'))
+const Branches = lazy(() => import('./components/Branches'))
+const FAQ = lazy(() => import('./components/FAQ'))
+const Contact = lazy(() => import('./components/Contact'))
 
 function App() {
   return (
@@ -28,11 +31,13 @@ function App() {
         <WhyChoose />
         <Trainers />
         <SuccessStories />
-        <Gallery />
-        <ChangeMaker />
-        <Branches />
-        <FAQ />
-        <Contact />
+        <Suspense fallback={<div className="h-32" />}>
+          <Gallery />
+          <ChangeMaker />
+          <Branches />
+          <FAQ />
+          <Contact />
+        </Suspense>
       </main>
       <Footer />
       <WhatsAppButton />

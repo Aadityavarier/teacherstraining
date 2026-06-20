@@ -2,32 +2,32 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiX, HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 
-// NOTE: All images in /assets/gallery/ should be compressed to under 300KB each before adding. Use TinyPNG or Squoosh before placing files here.
+// All images converted to WebP for faster mobile loading
 
-import cert1 from '../assets/gallery/certification-1.jpg';
-import cert2 from '../assets/gallery/certification-2.jpg';
-import cert3 from '../assets/gallery/certification-3.jpg';
-import cert4 from '../assets/gallery/certification-4.jpg';
-import cert5 from '../assets/gallery/certification-5.jpg';
-import cert6 from '../assets/gallery/certification-6.jpg';
-import cert7 from '../assets/gallery/certification-7.jpg';
-import cert8 from '../assets/gallery/certification-8.jpg';
-import cert9 from '../assets/gallery/certification-9.jpg';
-import cert10 from '../assets/gallery/certification-10.jpg';
-import cert11 from '../assets/gallery/certification-11.jpg';
-import certGroup1 from '../assets/gallery/certification-group-1.jpg';
-import certGroup2 from '../assets/gallery/certification-group-2.jpg';
-import certGroup3 from '../assets/gallery/certification-group-3.jpg';
-import group1 from '../assets/gallery/group-photo-1.jpg';
-import group2 from '../assets/gallery/group-photo-2.jpg';
-import poster1 from '../assets/gallery/poster-1.jpg';
-import poster2 from '../assets/gallery/poster-2.jpg';
-import poster3 from '../assets/gallery/poster-3.jpg';
-import poster4 from '../assets/gallery/poster-4.png';
-import poster5 from '../assets/gallery/poster-5.jpg';
-import poster6 from '../assets/gallery/poster-6.jpg';
-import teaching1 from '../assets/gallery/teaching-photo-1.jpg';
-import trio1 from '../assets/gallery/d-trio-photo-1.jpg';
+import cert1 from '../assets/gallery/certification-1.webp';
+import cert2 from '../assets/gallery/certification-2.webp';
+import cert3 from '../assets/gallery/certification-3.webp';
+import cert4 from '../assets/gallery/certification-4.webp';
+import cert5 from '../assets/gallery/certification-5.webp';
+import cert6 from '../assets/gallery/certification-6.webp';
+import cert7 from '../assets/gallery/certification-7.webp';
+import cert8 from '../assets/gallery/certification-8.webp';
+import cert9 from '../assets/gallery/certification-9.webp';
+import cert10 from '../assets/gallery/certification-10.webp';
+import cert11 from '../assets/gallery/certification-11.webp';
+import certGroup1 from '../assets/gallery/certification-group-1.webp';
+import certGroup2 from '../assets/gallery/certification-group-2.webp';
+import certGroup3 from '../assets/gallery/certification-group-3.webp';
+import group1 from '../assets/gallery/group-photo-1.webp';
+import group2 from '../assets/gallery/group-photo-2.webp';
+import poster1 from '../assets/gallery/poster-1.webp';
+import poster2 from '../assets/gallery/poster-2.webp';
+import poster3 from '../assets/gallery/poster-3.webp';
+import poster4 from '../assets/gallery/poster-4.webp';
+import poster5 from '../assets/gallery/poster-5.webp';
+import poster6 from '../assets/gallery/poster-6.webp';
+import teaching1 from '../assets/gallery/teaching-photo-1.webp';
+import trio1 from '../assets/gallery/d-trio-photo-1.webp';
 
 const images = [
   { src: cert1, alt: 'Rapid Teacher Training - Certification' },
