@@ -45,7 +45,7 @@ const Hero = () => {
       {/* Subtle radial glow */}
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_30%_50%,rgba(212,82,26,0.08)_0%,transparent_70%)]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center min-h-screen">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center min-h-screen">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-center w-full py-28 lg:py-0">
           {/* Text Column — 60% (3 of 5 cols) */}
           <motion.div

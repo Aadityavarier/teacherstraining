@@ -118,31 +118,26 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.35, ease: [0.25, 0.4, 0.25, 1] }}
+            transition={{ duration: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
             className="lg:hidden overflow-hidden bg-white shadow-xl"
+            style={{ position: 'relative', zIndex: 200 }}
           >
-            <div className="px-6 py-6 flex flex-col gap-4">
-              {navLinks.map((link, i) => (
-                <motion.button
+            <div className="px-6 py-6 flex flex-col gap-1">
+              {navLinks.map((link) => (
+                <button
                   key={link.id}
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: i * 0.05, duration: 0.2 }}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-left text-text-primary font-sans font-medium text-base py-2 border-b border-gray-100 hover:text-accent transition-colors duration-200"
+                  className="text-left text-text-primary font-sans font-medium text-base py-4 border-b border-gray-100 hover:text-accent transition-colors duration-200 w-full"
                 >
                   {link.label}
-                </motion.button>
+                </button>
               ))}
-              <motion.button
-                initial={{ x: -20, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: navLinks.length * 0.05, duration: 0.2 }}
+              <button
                 onClick={() => scrollToSection('contact')}
-                className="mt-2 bg-accent text-white font-sans font-semibold text-base rounded-full px-6 py-3 shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-200 text-center"
+                className="mt-4 bg-accent text-white font-sans font-semibold text-base rounded-full px-6 py-3 shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-200 text-center w-full"
               >
                 Enquire Now
-              </motion.button>
+              </button>
             </div>
           </motion.div>
         )}
