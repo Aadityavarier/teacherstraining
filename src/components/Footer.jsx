@@ -85,7 +85,7 @@ const Footer = () => {
             <p className="text-xs text-white/50">
               Designed & Built by{" "}
               <a
-                href="https://aadityavarier.github.io/Portfolio"
+                href="https://aadityavarier.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/70 font-medium hover:text-[#d4521a] hover:underline transition-colors"
