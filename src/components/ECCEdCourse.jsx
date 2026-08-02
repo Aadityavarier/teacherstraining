@@ -69,14 +69,15 @@ export default function ECCEdCourse() {
   };
 
   return (
-    <section id="course" className="py-20 bg-dark-navy diagonal-stripes">
+    <section id="course" className="py-20 bg-dark-navy diagonal-stripes" data-seo="ecced-course-ambernath-dombivali">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="font-playfair text-3xl md:text-4xl font-bold text-white text-center">
           Build a Career That Creates Impact
         </h2>
         <p className="text-center text-cream/80 text-lg mt-4 max-w-3xl mx-auto">
-          Our ECCEd Course is thoughtfully designed to give you the knowledge, confidence, and
-          practical skills required in modern preschool education
+          Our ECCEd diploma course — Early Childhood Care and Education — is thoughtfully designed
+          to give you the knowledge, confidence, and practical skills for modern preschool education.
+          ITES certified teacher training with guaranteed placement support.
         </p>
 
         <motion.div

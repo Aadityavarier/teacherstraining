@@ -12,8 +12,20 @@ export default function Branches() {
           transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
           className="font-playfair text-3xl md:text-4xl font-bold text-primary text-center"
         >
-          Visit Us
+          Visit Our Teacher Training Centres
         </motion.h2>
+        <p className="text-center text-text-primary/60 mt-3 max-w-2xl mx-auto">
+          Our ECCEd course in Palava, Dombivali and teacher training institute in Ambernath East
+          are conveniently located for students across Thane district.
+        </p>
+        {/* sr-only: Screen-reader & crawler accessible geo-targeting — invisible to users */}
+        <p className="sr-only">
+          Rapid Teacher Training Institute serves students from Ambernath East, Ambernath West,
+          Badlapur, Ulhasnagar, Kalyan, Dombivali, Thakurli, Palava, Lodha Palava, Khoni,
+          Titwala, Bhiwandi, and surrounding areas of Thane district, Maharashtra.
+          Offering preschool teacher training near Lodha Palava Phase 2, ECCEd course in Lakeshore Greens Palava,
+          and teacher training institute in Ambernath East near Shobha Hospital.
+        </p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

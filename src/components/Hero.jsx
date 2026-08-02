@@ -113,7 +113,7 @@ const Hero = () => {
               {/* Client Photo */}
               <img 
                 src={heroPhoto} 
-                alt="Rapid Institute Classroom" 
+                alt="Rapid Teacher Training Institute - ECCEd Preschool Teacher Training Class Ambernath Maharashtra" 
                 className="w-full h-auto object-cover"
               />
 

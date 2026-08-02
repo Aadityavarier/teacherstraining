@@ -76,8 +76,15 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* SEO Footer Text */}
+        <p className="text-white/25 text-xs text-center mt-10 max-w-3xl mx-auto leading-relaxed">
+          Rapid Teacher Training Institute offers ITES certified ECCEd preschool teacher training courses
+          in Ambernath East and Palava, Dombivali since 2007. Serving students from Ambernath, Badlapur,
+          Kalyan, Ulhasnagar, Dombivali, and Thane district.
+        </p>
+
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-white/10 text-center">
+        <div className="mt-6 pt-8 border-t border-white/10 text-center">
           <p className="text-white/40 text-sm">
             © 2025 Rapid Teacher Training Institute. All rights reserved.
           </p>

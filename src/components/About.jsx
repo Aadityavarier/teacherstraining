@@ -40,13 +40,12 @@ export default function About() {
               Every Great Nation is Built by Great Teachers
             </h2>
             <p className="mt-6 text-text-primary/80 text-lg leading-relaxed">
-              Rapid Teacher Training Institute is dedicated to preparing
-              confident, skilled, and compassionate preschool educators who can
-              positively shape the minds of children aged 2–6 years. Our
-              programs combine practical learning, professional guidance, and
-              career support to ensure every student is classroom-ready from day
-              one. Present in Ambernath & Palava, Dombivali — we
-              are a trusted name in ECCEd teacher training across the region.
+              Rapid Teacher Training Institute is a trusted preschool teacher training institute in Ambernath
+              &amp; Palava, Dombivali, dedicated to preparing confident, skilled, and compassionate early
+              childhood educators. Our early childhood education course in Thane district combines practical
+              learning, professional guidance, and career support — ensuring every student is classroom-ready
+              from day one. A teacher training institute established in 2007, we have shaped 2000+ careers
+              across Ambernath, Kalyan, Dombivali, Ulhasnagar, and surrounding areas.
             </p>
           </motion.div>
 
@@ -60,7 +59,7 @@ export default function About() {
             <div className="aspect-[4/3] lg:scale-105 rounded-2xl bg-gradient-to-br from-primary/10 to-cream/40 shadow-xl overflow-hidden flex items-center justify-center relative">
               <img 
                 src={aboutImage} 
-                alt="Rapid Institute Classroom" 
+                alt="Rapid Teacher Training Institute - About Our Preschool Teacher Training Program Ambernath" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </div>

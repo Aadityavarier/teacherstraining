@@ -49,8 +49,12 @@ const Trainers = () => {
     <section id="trainers" className="bg-soft-cream py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="font-playfair text-3xl md:text-4xl font-bold text-primary text-center">
-          Learn from Experienced Educators
+          Learn from Experienced Preschool Educators
         </h2>
+        <p className="text-center text-text-primary/60 mt-3 max-w-2xl mx-auto">
+          Our certified Jolly Phonics trainers and experienced preschool educators in Ambernath bring
+          decades of combined expertise to every training session.
+        </p>
 
         <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 max-w-5xl mx-auto"
@@ -68,7 +72,7 @@ const Trainers = () => {
               <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-dark-navy mx-auto flex items-center justify-center text-white text-2xl font-bold overflow-hidden border-4 border-white shadow-lg">
                 <img 
                   src={trainer.image} 
-                  alt={trainer.name} 
+                  alt={`${trainer.name} - ${trainer.role} - Rapid Teacher Training Institute Ambernath`} 
                   className="w-full h-full object-cover"
                 />
               </div>
