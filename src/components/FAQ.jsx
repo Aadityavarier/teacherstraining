@@ -14,6 +14,26 @@ const faqs = [
   {
     question: 'Do you offer weekend batches for working professionals and housewives?',
     answer: 'Yes, we offer flexible Saturday/Sunday weekend batches as well as morning/evening weekday batches.',
+  },
+  {
+    question: 'What kind of job placement assistance do you offer?',
+    answer: 'We provide 100% placement support, including resume preparation, mock interviews, and direct job recommendations at top schools across Ambernath, Dombivli, and Kalyan.',
+  },
+  {
+    question: 'Can housewives or women after a career break join the course?',
+    answer: 'Yes! Our ECCEd course is designed for housewives, career returnees, and freshers, with flexible morning, evening, and weekend batches.',
+  },
+  {
+    question: 'Are installment options available for the course fees?',
+    answer: 'Yes, we offer affordable fee structures with flexible monthly installment (EMI) plans for all our diploma courses.',
+  },
+  {
+    question: 'Is the teacher training course available online or offline?',
+    answer: 'We offer both! You can choose full classroom batches or hybrid training (online theory with hands-on practical workshops at our campuses).',
+  },
+  {
+    question: 'What career options open up after completing the diploma?',
+    answer: 'Graduates can work as Pre-Primary Teachers, Nursery Educators, Daycare Managers, or start their own preschools and phonics classes.',
   }
 ];
 
