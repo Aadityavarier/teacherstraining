@@ -4,35 +4,17 @@ import { FaChevronDown } from 'react-icons/fa';
 
 const faqs = [
   {
-    question: 'Who can join the ECCEd program?',
-    answer:
-      'Anyone passionate about early childhood education. Homemakers, graduates, working professionals, and career restarters are all welcome.',
+    question: 'What is the duration and eligibility for the ECCEd course in Ambernath?',
+    answer: 'The ECCEd diploma ranges from 6 months to 1 year with eligibility starting after 10th/12th passing.',
   },
   {
-    question: 'What is the duration of the course?',
-    answer:
-      'Please contact us for current batch details and course duration.',
+    question: 'Is the ECCEd certificate from Rapid Teachers Training Govt recognized?',
+    answer: 'Yes, our Early Childhood Care & Education courses are recognized and accepted by leading private and international schools across Mumbai and Thane.',
   },
   {
-    question: 'Will I get a recognized certificate?',
-    answer:
-      'Yes. All students receive certification by ITES, Mumbai upon successful completion.',
-  },
-  {
-    question: 'Is placement assistance provided?',
-    answer:
-      'Yes. We offer full career and placement support including exam prep, interview preparation, and job assistance.',
-  },
-  {
-    question: 'Do I need prior teaching experience?',
-    answer:
-      'No prior experience is required. Our program is designed to take you from beginner to classroom-ready.',
-  },
-  {
-    question: 'Which locations do you operate from?',
-    answer:
-      'We operate from two branches — Ambernath-East and Palava, Dombivali. Visit us at either location for enquiries and admissions.',
-  },
+    question: 'Do you offer weekend batches for working professionals and housewives?',
+    answer: 'Yes, we offer flexible Saturday/Sunday weekend batches as well as morning/evening weekday batches.',
+  }
 ];
 
 export default function FAQ() {

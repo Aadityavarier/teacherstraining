@@ -26,18 +26,18 @@ const cards = [
   },
   {
     icon: FaSchool,
-    title: 'Internship & Placement Assistance',
-    desc: 'Hands-on teaching internships and full placement support in partner schools',
+    title: 'Career Scope & Job Placement',
+    desc: 'Hands-on teaching internships, excellent pre-primary teacher salary prospects, and full placement support in partner schools.',
   },
   {
     icon: FaSeedling,
-    title: 'Personality Development & Communication Skills',
-    desc: 'Build confidence, public speaking, and professional communication abilities',
+    title: 'Montessori & Nursery Teacher Training Methods',
+    desc: 'Learn advanced pedagogical techniques, child psychology, and Montessori principles.',
   },
   {
     icon: FaLightbulb,
-    title: 'Entrepreneurship Mindset Development',
-    desc: 'Learn to plan, launch, and manage your own preschool or daycare center',
+    title: 'ECCEd Course Eligibility & Flexibility',
+    desc: 'Flexible batch timings for working women and homemakers. Minimum 10th/12th pass required.',
   },
 ];
 
@@ -72,12 +72,12 @@ export default function ECCEdCourse() {
     <section id="course" className="py-20 bg-dark-navy diagonal-stripes" data-seo="ecced-course-ambernath-dombivali">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="font-playfair text-3xl md:text-4xl font-bold text-white text-center">
-          Build a Career That Creates Impact
+          Early Childhood Care &amp; Education (ECCEd) Course Syllabus
         </h2>
         <p className="text-center text-cream/80 text-lg mt-4 max-w-3xl mx-auto">
           Our ECCEd diploma course — Early Childhood Care and Education — is thoughtfully designed
-          to give you the knowledge, confidence, and practical skills for modern preschool education.
-          ITES certified teacher training with guaranteed placement support.
+          to give you the knowledge, confidence, and practical classroom training for modern preschool education.
+          Govt. recognized teacher training with guaranteed placement support.
         </p>
 
         <motion.div

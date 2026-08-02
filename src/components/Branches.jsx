@@ -12,7 +12,7 @@ export default function Branches() {
           transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
           className="font-playfair text-3xl md:text-4xl font-bold text-primary text-center"
         >
-          Visit Our Teacher Training Centres
+          Visit Our Teacher Training Campuses in Ambernath &amp; Dombivli
         </motion.h2>
         <p className="text-center text-text-primary/60 mt-3 max-w-2xl mx-auto">
           Our ECCEd course in Palava, Dombivali and teacher training institute in Ambernath East

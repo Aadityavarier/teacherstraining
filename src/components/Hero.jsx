@@ -62,15 +62,14 @@ const Hero = () => {
               variants={childVariants}
               className="font-playfair text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
             >
-              Shaping Passionate Educators for a Better Tomorrow Since 2007
+              Certified ECCEd &amp; Pre-Primary Teacher Training Institute in Ambernath &amp; Dombivli
             </motion.h1>
 
             <motion.p
               variants={childVariants}
               className="font-sans text-cream text-lg md:text-xl mt-6 max-w-xl leading-relaxed"
             >
-              Join 2000+ trained teachers who built meaningful careers through
-              Rapid's ECCEd program
+              Govt. Recognized Teacher Training Diploma Programs with 100% Placement Assistance and Flexible Weekday/Weekend Batches.
             </motion.p>
 
             <motion.div
