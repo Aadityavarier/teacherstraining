@@ -46,7 +46,7 @@ const Hero = () => {
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_30%_50%,rgba(212,82,26,0.08)_0%,transparent_70%)]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center min-h-screen">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-center w-full py-28 lg:py-0">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-center w-full py-28 lg:pt-24 lg:pb-12">
           {/* Text Column — 60% (3 of 5 cols) */}
           <motion.div
             className="lg:col-span-3"
@@ -54,7 +54,7 @@ const Hero = () => {
             initial="hidden"
             animate="visible"
           >
-            <motion.div variants={childVariants} className="mt-4 sm:mt-0 mb-4 inline-block bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-1.5 rounded-full">
+            <motion.div variants={childVariants} className="mb-4 inline-block bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-1.5 rounded-full">
               <span className="font-sans text-cream text-sm font-semibold tracking-wider uppercase">Established 2007</span>
             </motion.div>
             
