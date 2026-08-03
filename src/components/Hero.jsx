@@ -54,7 +54,7 @@ const Hero = () => {
             initial="hidden"
             animate="visible"
           >
-            <motion.div variants={childVariants} className="mb-4 inline-block bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-1.5 rounded-full">
+            <motion.div variants={childVariants} className="mt-4 sm:mt-0 mb-4 inline-block bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-1.5 rounded-full">
               <span className="font-sans text-cream text-sm font-semibold tracking-wider uppercase">Established 2007</span>
             </motion.div>
             
